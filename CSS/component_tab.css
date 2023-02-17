@@ -1,0 +1,33 @@
+/*////////////////////////
+===== Tab - Tab-link =====
+////////////////////////*/
+.todo-title-wrap {
+  border-bottom: 1px solid var(--gray-300);
+}
+.todo-tab {
+  display: flex;
+}
+.todo-tab .todo-tab-link {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  background-color: var(--gray-200);
+  color: var(--text-color-38);
+  border: 2px solid var(--gray-300);
+  border-radius: 10px;
+  transition: .1s;
+  appearance: none; /*隱藏原生箭頭*/
+}
+.todo-tab .todo-tab-link:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.todo-tab .todo-tab-link:last-child {
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+}
+.todo-tab .todo-tab-link.active {
+  background-color: #fff;
+  color:var(--text-color-87);
+}

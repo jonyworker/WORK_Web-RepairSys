@@ -1,0 +1,16 @@
+footer .caption {
+  font-size: 13px;
+  line-height: 137%;
+  font-weight: normal;
+  color: var(--text-color-38);
+  padding-bottom: 24px;
+  text-align: center;
+}
+footer .back-link {
+  font-size: 13px;
+  line-height: 137%;
+  font-weight: normal;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}

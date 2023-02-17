@@ -1,0 +1,11 @@
+.form-install-section {
+  padding-top: 67px;
+  background-color: var(--form-background-color);
+}
+.form-install-content {
+  height: 100%;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  /* display: flex;
+  flex-direction: column; */
+}

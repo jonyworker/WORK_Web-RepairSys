@@ -1,0 +1,357 @@
+/*////////////////////////
+===== 表單 - 共同設定 =====
+////////////////////////*/
+form { flex: 1; }
+form .input-item,
+form .uninput-item,
+form .radio-item,
+form .select-item,
+form .upload-item,
+form .date-item,
+form .input-item-small {
+  /* display: flex;
+  flex-direction: column; */
+  margin-bottom: 16px;
+}
+form .uninput-item > label,
+form .select-item > label,
+form .input-item > label,
+form .radio-item > label,
+form .textarea-item > label,
+form .upload-item > label,
+form .date-item > label,
+form .input-item-small > label {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 140%;
+  margin-bottom: 8px;
+}
+
+/* login password 頁面用 */
+form .input-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+form .input-item:last-of-type {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* 分組小標題 */
+form legend {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 700;
+  color: var(--text-color-87);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+form legend::after {
+  content: "";
+  height: 1px;
+  width: 0;
+  background-color: var(--gray-400);
+  flex-grow: 1;
+  margin-left: 8px;
+}
+
+/*//////////////////////////
+===== 表單 - 無法輸入的元件 =====
+/////////////////////////*/
+.uninput-box {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  background-color: var(--gray-200);
+  color: var(--text-color-87);
+  border: 2px solid var(--gray-400);
+  border-radius: 10px;
+}
+
+/*///////////////////////////////
+===== 表單 - 選擇元件(select) =====
+///////////////////////////////*/
+.select-item .select-wrap {
+  position: relative;
+}
+.select-item .select-wrap::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url(../image/chevron-down\ 2.svg);
+  z-index: 1;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /*穿透箭頭用*/
+}
+.select-item select:hover {
+  box-shadow: 0px 0px 0px 4px rgba(103, 170, 50, 0.2);
+  border-color: var(--primary-color);
+}
+.select-item select{
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  background-color: #fff;
+  color: var(--text-color-87);
+  border: 2px solid var(--gray-600);
+  border-radius: 10px;
+  transition: .1s;
+  appearance: none; /*隱藏原生箭頭*/
+}
+.select-item select:invalid {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  color: var(--text-color-38);
+}
+
+/*///////////////////////////////////
+===== 表單 - 輸入元件(text-input) =====
+///////////////////////////////////*/
+.input-item input:not(input[type=submit]) {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  background-color: #fff;
+  color: var(--text-color-87);
+  border: 2px solid var(--gray-600);
+  border-radius: 10px;
+  transition: .1s;
+}
+.input-item input:not(input[type=submit]):hover {
+  box-shadow: 0px 0px 0px 4px rgba(103, 170, 50, 0.2);
+  border-color: var(--primary-color);
+}
+::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  color: var(--text-color-38);
+}
+
+/*////////////////////////////////////////////
+===== 表單 - 小的輸入元件(text-input-small) =====
+////////////////////////////////////////////*/
+.input-item-small input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  background-color: #fff;
+  color: var(--text-color-87);
+  border: 2px solid var(--gray-600);
+  border-radius: 10px;
+  transition: .1s;
+}
+.input-item-small input:hover {
+  box-shadow: 0px 0px 0px 4px rgba(103, 170, 50, 0.2);
+  border-color: var(--primary-color);
+}
+
+/*/////////////////////////////////////
+===== 表單 - 輸入元件(radio-button) =====
+/////////////////////////////////////*/
+form .radio-selection {
+  display: flex;
+}
+form .radio-selection input[type=radio] {
+  position: absolute;
+}
+form .selection-1,
+form .selection-2 {
+  flex: 1;
+}
+form .selection-1 label::before,
+form .selection-2 label::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  border: 2px solid var(--gray-600);
+  background-color: #fff;
+  left: 20px;
+  transition: .1s;
+}
+form .radio-selection input[type=radio]:checked ~ label::before {
+  border: 8px solid var(--primary-color);
+}
+form .selection-1 label,
+form .selection-2 label {
+  position: relative;
+  display: block;
+  padding: 16px 20px 16px 52px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  background-color: #fff;
+  color: var(--text-color-87);
+  border: 2px solid var(--gray-600);
+}
+form .selection-1 label {
+  border-radius: 10px 0 0 10px;
+  border-right-color: var(--primary-color);
+}
+form .selection-2 label {
+  border-radius: 0 10px 10px 0;
+  border-left: 0;
+}
+form .radio-selection input[type=radio]:checked ~ label {
+  border-right-color: var(--primary-color);
+  border-top-color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  border-left-color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+/*/////////////////////////////////
+===== 表單 - 上傳元件(input file) =====
+/////////////////////////////////*/
+.upload-wrap {
+  border: 2px dashed var(--gray-600);
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 30px;
+}
+.upload-wrap input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  opacity: 0;
+}
+.upload-title {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  background-color: #fff;
+  color: var(--gray-600);
+}
+/*------- 上傳列表 -------*/
+.upload-pre-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 8px;
+  border-bottom: 1px solid var(--gray-400);
+}
+/*------- 上傳列表 圖片 -------*/
+.upload-list .upload-pre-img-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 40px;
+  overflow: hidden;
+  margin-right: 16px;
+}
+.upload-list .upload-pre-img-box img {
+  vertical-align: top;
+  width: 100%;
+}
+/*------- 上傳列表 資料內容 -------*/
+.upload-pre-info p:first-child {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 140%;
+  color: var(--text-color-87);
+  margin-bottom: 4px;
+}
+.upload-pre-info p:last-child {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 140%;
+  color: var(--text-color-38);
+}
+/*------- 上傳列表 垃圾桶 icon -------*/
+.upload-pre-icon {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/*/////////////////////////////////
+===== 表單 - 按鈕(input submit) =====
+/////////////////////////////////*/
+.submit-item {
+  margin-top: 80px;
+}
+
+/*/////////////////////////////////
+===== 表單 - 輸入元件(textarea) =====
+/////////////////////////////////*/
+.textarea-item {
+  position: relative;
+}
+.textarea-item textarea {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  background-color: #fff;
+  color: var(--text-color-87);
+  border: 2px solid var(--gray-600);
+  border-radius: 10px;
+  resize: none;
+  transition: .1s;
+}
+.textarea-wrap::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 14px; 
+  bottom: 14px;
+  background-image: url(../image/resize.png);
+  background-repeat: no-repeat;
+  pointer-events: none; /*穿透 resize icon 用*/
+}
+.textarea-wrap:hover > textarea {
+  box-shadow: 0px 0px 0px 4px rgba(103, 170, 50, 0.2);
+  border-color: var(--primary-color);
+}
+
+
+
+
+
+
+
+/*////////////////////////////////////
+===== 表單 - 輸入元件(date-picker) =====
+////////////////////////////////////*/
+.date-item input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  background-color: #fff;
+  color: var(--text-color-87);
+  border: 2px solid var(--gray-600);
+  border-radius: 10px;
+  transition: .1s;
+}
+.date-item input:not(input[type=submit]):hover {
+  box-shadow: 0px 0px 0px 4px rgba(103, 170, 50, 0.2);
+  border-color: var(--primary-color);
+}
+::-webkit-datetime-edit-text { padding: 0 2rem; }

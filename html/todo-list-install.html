@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>欣能能源</title>
+  <!-- css link -->
+  <link rel="stylesheet" href="../CSS/all.css">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- google icon -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+  <!-- TOP-BAR 漢堡控制器 -->
+  <input type="checkbox" id="menu-toggle">
+  
+  <!-- TOP-BAR Section -->
+  <section class="top-bar">
+    <div class="top-bar-mask">
+      <div class="container">
+        <div class="top-bar-content">
+          <!-- logo -->
+          <a href="#" alt="click to main page" title="Visit the main page">
+            <div class="logo-content">
+              <img src="../image/logo_white.svg" alt="logo">
+            </div>
+          </a>
+          
+          <!-- Hamburger icon -->
+          <label class="hamburger" for="menu-toggle"></label>
+        </div>
+        <!-- Hamburger 選單內容 -->
+        <div class="dropdown-menu">
+          <div class="container">
+            <nav class="main-nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="#">
+                    <div>
+                      <span class="material-icons-outlined fz-32 mr-16">vpn_key</span>
+                      <p>修改密碼</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button class="btn-outline btn-logout" type="submit" alt="登出按鈕">Log Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- todo-section -->
+  <section class="todo-section">
+
+    <!-- todo-title-content -->
+    <div class="todo-title-wrap">
+      <div class="container">
+        <div class="todo-content">
+          <!-- title -->
+          <div class="title-wrap">
+            <h2 class="title mb-8">安裝作業</h2>
+            <div class="todo-overview mb-32">
+              <!-- 全部代辦事項總數 -->
+              <p class="subtitle">6 個工作項目</p>
+
+              <!-- 過期總數 -->
+              <!-- 程式碼#71的class中加 .d-normal 可顯示過期總數 -->
+              <!-- 程式碼#71的class中加 .d-none 隱藏過期總數 -->
+              <!-- 當過期總數大於一時，顯示 -->
+              <div class="total-delay">
+                <p>
+                  <span>1</span>
+                  個過期
+                </p>
+              </div>
+
+              <!-- 今日代辦總數 -->
+              <!-- 程式碼#83的class中加 .d-normal 可顯示今日代辦總數 -->
+              <!-- 程式碼#83的class中加 .d-none 隱藏今日代辦總數 -->
+              <!-- 當過期總數大於一時，顯示 -->
+              <div class="total-today">
+                <p>
+                  <span>2</span>
+                  個今日
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <!-- tab links -->
+          <div class="todo-tab">
+            <button class="todo-tab-link" onclick="openTabType(event, 'todo-list')" id="defaultOpen">待辦工作項目</button>
+            <button class="todo-tab-link" onclick="openTabType(event, 'done-list')">已完成工作</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- todo-list-content(代辦) -->
+    <div id="todo-list" class="tab-content">
+
+      
+      <div class="container">
+        <!-- tab content -->
+        <!-- todo-list -->
+        <table class="todo-list-wrap">
+          <tbody>
+            <!-- 代辦資料列 -->
+            <tr>
+              <!-- 任務類別 icon -->
+              <!-- 現勘：camera-light.svg -->
+              <!-- 安裝：truck-light.svg -->
+              <!-- 維修：wrench-light.svg -->
+              <td>
+                <div class="todo-list-icon">
+                  <img src="../image/camera-light.svg" alt="">
+                </div>
+              </td>
+              <!-- 任務編號 -->
+              <td>20220131001</td>
+              <!-- 客戶姓名稱謂 -->
+              <td>許鳳姬 小姐</td>
+              <!-- 施工日期提醒 -->
+              <td>
+                <!-- 提醒標籤 - 過期累計 -->
+                <div class="todo-state-delay d-normal">
+                  <p>
+                    過期
+                    <span>1</span>
+                    天
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 今日 -->
+                <div class="todo-state-today d-none">
+                  <p>
+                    今日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 明日 -->
+                <div class="todo-state-tomorrow d-none">
+                  <p>
+                    明日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 任務指派日 -->
+                <p class="todo-state-date d-none">02/15/22</p>
+              </td>
+            </tr>
+  
+            <!-- 代辦資料列 -->
+            <tr>
+              <!-- 任務類別 icon -->
+              <!-- 現勘：camera-light.svg -->
+              <!-- 安裝：truck-light.svg -->
+              <!-- 維修：wrench-light.svg -->
+              <td>
+                <div class="todo-list-icon">
+                  <img src="../image/wrench-light.svg" alt="">
+                </div>
+              </td>
+              <!-- 任務編號 -->
+              <td>20220201001</td>
+              <!-- 客戶姓名稱謂 -->
+              <td>林祖庭 先生</td>
+              <!-- 施工日期提醒 -->
+              <td>
+                <!-- 提醒標籤 - 過期累計 -->
+                <div class="todo-state-delay d-none">
+                  <p>
+                    過期
+                    <span>1</span>
+                    天
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 今日 -->
+                <div class="todo-state-today d-normal">
+                  <p>
+                    今日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 明日 -->
+                <div class="todo-state-tomorrow d-none">
+                  <p>
+                    明日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 任務指派日 -->
+                <p class="todo-state-date d-none">02/15/22</p>
+              </td>
+            </tr>
+  
+            <!-- 代辦資料列 -->
+            <tr>
+              <!-- 任務類別 icon -->
+              <!-- 現勘：camera-light.svg -->
+              <!-- 安裝：truck-light.svg -->
+              <!-- 維修：wrench-light.svg -->
+              <td>
+                <div class="todo-list-icon">
+                  <img src="../image/truck-light.svg" alt="">
+                </div>
+              </td>
+              <!-- 任務編號 -->
+              <td>20220204005</td>
+              <!-- 客戶姓名稱謂 -->
+              <td>黃昶元 先生</td>
+              <!-- 施工日期提醒 -->
+              <td>
+                <!-- 提醒標籤 - 過期累計 -->
+                <div class="todo-state-delay d-none">
+                  <p>
+                    過期
+                    <span>1</span>
+                    天
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 今日 -->
+                <div class="todo-state-today d-normal">
+                  <p>
+                    今日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 明日 -->
+                <div class="todo-state-tomorrow d-none">
+                  <p>
+                    明日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 任務指派日 -->
+                <p class="todo-state-date d-none">02/15/22</p>
+              </td>
+            </tr>
+  
+            <!-- 代辦資料列 -->
+            <tr>
+              <!-- 任務類別 icon -->
+              <!-- 現勘：camera-light.svg -->
+              <!-- 安裝：truck-light.svg -->
+              <!-- 維修：wrench-light.svg -->
+              <td>
+                <div class="todo-list-icon">
+                  <img src="../image/truck-light.svg" alt="">
+                </div>
+              </td>
+              <!-- 任務編號 -->
+              <td>20220205005</td>
+              <!-- 客戶姓名稱謂 -->
+              <td>王永續 先生</td>
+              <!-- 施工日期提醒 -->
+              <td>
+                <!-- 提醒標籤 - 過期累計 -->
+                <div class="todo-state-delay d-none">
+                  <p>
+                    過期
+                    <span>1</span>
+                    天
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 今日 -->
+                <div class="todo-state-today d-none">
+                  <p>
+                    今日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 明日 -->
+                <div class="todo-state-tomorrow d-normal">
+                  <p>
+                    明日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 任務指派日 -->
+                <p class="todo-state-date d-none">02/15/22</p>
+              </td>
+            </tr>
+  
+            <!-- 代辦資料列 -->
+            <tr>
+              <!-- 任務類別 icon -->
+              <!-- 現勘：camera-light.svg -->
+              <!-- 安裝：truck-light.svg -->
+              <!-- 維修：wrench-light.svg -->
+              <td>
+                <div class="todo-list-icon">
+                  <img src="../image/wrench-light.svg" alt="">
+                </div>
+              </td>
+              <!-- 任務編號 -->
+              <td>20220306010</td>
+              <!-- 客戶姓名稱謂 -->
+              <td>張淑琴 小姐</td>
+              <!-- 施工日期提醒 -->
+              <td>
+                <!-- 提醒標籤 - 過期累計 -->
+                <div class="todo-state-delay d-none">
+                  <p>
+                    過期
+                    <span>1</span>
+                    天
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 今日 -->
+                <div class="todo-state-today d-none">
+                  <p>
+                    今日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 明日 -->
+                <div class="todo-state-tomorrow d-none">
+                  <p>
+                    明日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 任務指派日 -->
+                <p class="todo-state-date d-normal">02/15/22</p>
+              </td>
+            </tr>
+  
+            <!-- 代辦資料列 -->
+            <tr>
+              <!-- 任務類別 icon -->
+              <!-- 現勘：camera-light.svg -->
+              <!-- 安裝：truck-light.svg -->
+              <!-- 維修：wrench-light.svg -->
+              <td>
+                <div class="todo-list-icon">
+                  <img src="../image/camera-light.svg" alt="">
+                </div>
+              </td>
+              <!-- 任務編號 -->
+              <td>20220306010</td>
+              <!-- 客戶姓名稱謂 -->
+              <td>聶儒庭 小姐</td>
+              <!-- 施工日期提醒 -->
+              <td>
+                <!-- 提醒標籤 - 過期累計 -->
+                <div class="todo-state-delay d-none">
+                  <p>
+                    過期
+                    <span>1</span>
+                    天
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 今日 -->
+                <div class="todo-state-today d-none">
+                  <p>
+                    今日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 明日 -->
+                <div class="todo-state-tomorrow d-none">
+                  <p>
+                    明日
+                  </p>
+                </div>
+                <!-- 提醒標籤 - 任務指派日 -->
+                <p class="todo-state-date d-normal">02/15/22</p>
+              </td>
+            </tr>
+  
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- todo-list-content(已完成) -->
+    <div id="done-list" class="tab-content">
+
+      <!-- tab content -->
+      <!-- todo-list -->
+      <div class="container">
+        <table class="done-list-wrap">
+          <tbody>
+  
+            <!-- 已完成任務列表 -->
+            <tr>
+              <!-- 已完成任務類別 icon -->
+              <!-- 現勘：camera-light-gray.svg -->
+              <!-- 安裝：truck-light-gray.svg -->
+              <!-- 維修：wrench-light-gray.svg -->
+              <td>
+                <div class="done-list-icon">
+                  <img src="../image/truck-light-gray.svg" alt="">
+                </div>
+              </td>
+              <!-- 任務編號 -->
+              <td>20211231010</td>
+              <!-- 客戶姓名稱謂 -->
+              <td>歐鴻安 先生</td>
+              <!-- 結案日期提醒 -->
+              <td>
+                <!-- 任務完成日 -->
+                <p class="done-state-date">01/01/22</p>
+              </td>
+            </tr>
+            
+            <!-- 已完成任務列表 -->
+            <tr>
+              <!-- 已完成任務類別 icon -->
+              <!-- 現勘：camera-light-gray.svg -->
+              <!-- 安裝：truck-light-gray.svg -->
+              <!-- 維修：wrench-light-gray.svg -->
+              <td>
+                <div class="done-list-icon">
+                  <img src="../image/camera-light-gray.svg" alt="">
+                </div>
+              </td>
+              <!-- 任務編號 -->
+              <td>20211230009</td>
+              <!-- 客戶姓名稱謂 -->
+              <td>廖攸旻 小姐</td>
+              <!-- 結案日期提醒 -->
+              <td>
+                <!-- 任務完成日 -->
+                <p class="done-state-date">12/31/21</p>
+              </td>
+            </tr>
+  
+            
+  
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+
+  </section>
+
+  <!-- 遮罩 -->
+  <div class="hamburger-black-overlay"></div>
+
+  <!-- tab JS -->
+  <script>
+    function openTabType(evt, tabtype) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("todo-tab-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabtype).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+</html>

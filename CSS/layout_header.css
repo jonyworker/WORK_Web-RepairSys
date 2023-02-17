@@ -1,0 +1,27 @@
+/*/////////////////////////
+===== layout - header =====
+/////////////////////////*/
+.top-bar {
+  background-color: var(--primary-color);
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}
+
+/* 遮蔽dropbox遮罩 */
+.top-bar-mask {
+  background-color: var(--primary-color);
+  padding: 16px 0;
+}
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*----- logo -----*/
+.top-bar .logo-content {
+  width: 114px;
+}
+.top-bar .logo-content img {
+  width: 100%;
+}

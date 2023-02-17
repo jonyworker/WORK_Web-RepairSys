@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>欣能能源</title>
+  <!-- css link -->
+  <link rel="stylesheet" href="../CSS/all.css">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- google icon -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+  <!-- TOP-BAR 漢堡控制器 -->
+  <input type="checkbox" id="menu-toggle">
+  
+  <!-- TOP-BAR Section -->
+  <section class="top-bar">
+    <div class="top-bar-mask">
+      <div class="container">
+        <div class="top-bar-content">
+          <!-- logo -->
+          <a href="#" alt="click to main page" title="Visit the main page">
+            <div class="logo-content">
+              <img src="../image/logo_white.svg" alt="logo">
+            </div>
+          </a>
+          
+          <!-- Hamburger icon -->
+          <label class="hamburger" for="menu-toggle"></label>
+        </div>
+        <!-- Hamburger 選單內容 -->
+        <div class="dropdown-menu">
+          <div class="container">
+            <nav class="main-nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="#">
+                    <div>
+                      <span class="material-icons-outlined fz-32 mr-16">vpn_key</span>
+                      <p>修改密碼</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button class="btn-outline btn-logout" type="submit" alt="登出按鈕">Log Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login Section -->
+  <section class="login-section">
+    <div class="container">
+      <div class="login-content">
+
+        <!-- title -->
+        <div class="title-wrap">
+          <h2 class="title mb-8">登入</h2>
+          <p class="subtitle mb-32">嗨！歡迎回來～ 請輸入您的帳號和密碼</p>
+        </div>
+
+        <!-- 表單 -->
+        <form action="#">
+          <ul class="input-list">
+            <li class="input-item">
+              <label for="username">使用者名稱</label>
+              <input type="text" id="username" name="username" placeholder="請輸入使用者名稱">
+            </li>
+            <li class="input-item">
+              <label for="password">密碼</label>
+              <input type="password" id="password" name="password" placeholder="請輸入密碼">
+            </li>
+            <li class="input-item mb-0">
+              <input class="btn-filled" type="submit" value="登入">
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <p class="caption">卡未子數位創意有限公司系統開發</p>
+  </footer>
+
+  <!-- 遮罩 -->
+  <div class="hamburger-black-overlay"></div>
+</body>
+</html>

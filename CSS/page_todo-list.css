@@ -1,0 +1,117 @@
+.todo-section {
+  padding-top: 67px;
+  /* background-color: var(--form-background-color); */
+}
+.todo-content {
+  height: 100%;
+  padding-top: 32px;
+  padding-bottom: 24px;
+}
+.todo-title-wrap {
+  border-bottom: 1px solid var(--gray-300);
+}
+
+/*///////////////////////////////
+===== title - todo overview =====
+///////////////////////////////*/
+.todo-content .todo-overview {
+  display: flex;
+  align-items: center;
+}
+.todo-content .todo-overview .subtitle {
+  color: var(--text-color-60);
+}
+.todo-content .total-delay,
+.todo-content .total-today,
+.todo-list-wrap .total-delay,
+.todo-list-wrap .total-today {
+  padding: 2px 12px;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: normal;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+.todo-content .total-delay,
+.todo-list-wrap .total-delay {
+  background-color: var(--error-100);
+  color: var(--error-500);
+}
+.todo-content .total-today,
+.todo-list-wrap .total-today {
+  background-color: var(--success-300);
+  color: var(--text-color-87);
+}
+
+
+/*/////////////////////////
+===== todo-list - 內容 =====
+/////////////////////////*/
+/*----- todo-list table -----*/
+.todo-list-wrap,
+.done-list-wrap {
+  width: 100%;
+}
+.todo-list-wrap tbody,
+.done-list-wrap tbody {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  color: var(--text-color-87);
+}
+.done-list-wrap tbody {
+  color: var(--text-color-38);
+}
+.todo-list-wrap tbody td,
+.done-list-wrap tbody td {
+  display: table-cell;
+  padding: 32px 0px;
+  vertical-align:middle;
+  border-bottom: 1px solid var(--gray-300);
+}
+.todo-list-wrap tbody td:first-child,
+.done-list-wrap tbody td:first-child {
+  border-bottom: none;
+}
+.todo-list-wrap tbody td:last-child,
+.done-list-wrap tbody td:last-child {
+  width: 25%;
+  text-align: end;
+}
+
+/*----- todo-list 狀態 icon -----*/
+.todo-list-icon,
+.done-list-icon {
+  width: 36px;
+}
+.todo-list-icon img,
+.done-list-icon img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+
+
+/*----- todo-list 專用狀態標籤 -----*/
+.todo-list-wrap .todo-state-delay,
+.todo-list-wrap .todo-state-today,
+.todo-list-wrap .todo-state-tomorrow {
+  padding: 4px 12px;
+  font-size: 12px;
+  line-height: 140%;
+  font-weight: normal;
+  border-radius: 6px;
+  text-align: center;
+}
+.todo-list-wrap .todo-state-delay {
+  background-color: var(--error-100);
+  color: var(--error-500);
+}
+.todo-list-wrap .todo-state-today {
+  background-color: var(--success-300);
+  color: var(--text-color-87);
+}
+.todo-list-wrap .todo-state-tomorrow {
+  background-color: var(--warning-300);
+  color: var(--text-color-87);
+}

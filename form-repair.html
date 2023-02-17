@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>欣能能源</title>
+  <!-- css link -->
+  <link rel="stylesheet" href="../CSS/all.css">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- google icon -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+  <!-- TOP-BAR 漢堡控制器 -->
+  <input type="checkbox" id="menu-toggle">
+  
+  <!-- TOP-BAR Section -->
+  <section class="top-bar">
+    <div class="top-bar-mask">
+      <div class="container">
+        <div class="top-bar-content">
+          <!-- logo -->
+          <a href="./index.html" alt="click to main page" title="Visit the main page">
+            <div class="logo-content">
+              <img src="../image/logo_white.svg" alt="logo">
+            </div>
+          </a>
+          
+          <!-- Hamburger icon -->
+          <label class="hamburger" for="menu-toggle"></label>
+        </div>
+        <!-- Hamburger 選單內容 -->
+        <div class="dropdown-menu">
+          <div class="container">
+            <nav class="main-nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="./password-reset.html">
+                    <div>
+                      <span class="material-icons-outlined fz-32 mr-16">vpn_key</span>
+                      <p>修改密碼</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button class="btn-outline btn-logout" type="submit" alt="登出按鈕">Log Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- form-repair Section -->
+  <section class="form-repair-section">
+    <div class="container">
+      <div class="form-repair-content">
+        <!-- title -->
+        <div class="title-wrap">
+          <h2 class="title mb-8">現場維修單</h2>
+          <p class="subtitle mb-32">哈囉！你好～請協助我們維修完畢後輸入以下資料，以幫助後續工作銜接</p>
+        </div>
+
+        <!-- 表單 -->
+        <form class="form-group" action="#">
+
+          <legend>客戶基本資料</legend>
+          <ul class="mb-40">
+            <!-- 案件編號 -->
+            <li class="uninput-item">
+              <label>案件編號</label>
+              <div class="uninput-box">
+                <!-- 承襲自業務接單時的資料 -->
+                <p>20220131001</p>
+              </div>
+            </li>
+            <!-- 客戶名稱 -->
+            <li class="uninput-item">
+              <label>客戶名稱</label>
+              <div class="uninput-box">
+                <!-- 承襲自業務接單時的資料 -->
+                <p>王小明</p>
+              </div>
+            </li>
+            <!-- 客戶地址 -->
+            <li class="uninput-item">
+              <label>客戶地址</label>
+              <!-- 承襲自業務接單時的資料 -->
+              <div class="d-flex mb-16">
+                <div class="uninput-box mr-8">
+                  <p>台北市</p>
+                </div>
+                <div class="uninput-box ml-8">
+                  <p>中山區</p>
+                </div>
+              </div>
+              <div class="uninput-box">
+                <p>中山北路二段125巷31弄4-1號5樓 </p>
+              </div>
+              
+            </li>
+            <!-- 聯絡電話 -->
+            <li class="uninput-item">
+              <label>聯絡電話</label>
+              <div class="uninput-box">
+                <!-- 承襲自業務接單時的資料 -->
+                <p>0988-888-888</p>
+              </div>
+            </li>
+          </ul>
+          
+          <legend>設備資訊</legend>
+          <ul class="mb-40">
+            <!-- 維修設備 -->
+            <li class="uninput-item">
+              <label>維修設備</label>
+              <div class="uninput-box">
+                <!-- 承襲自業務接單時的資料 -->
+                <p>ETC-80</p>
+              </div>
+            </li>
+            <!-- 設備故障原因 (需選擇) -->
+            <li class="select-item">
+              <label for="power-support">設備故障原因</label>
+              <div class="select-wrap">
+                <select name="power-support" id="power-support" required>
+                  <option value="">請選擇設備故障原因</option>
+                  <option value="單相 110V">單相 110V</option>
+                  <option value="單相 220V">單相 220V</option>
+                  <option value="三相 220V">三相 220V</option>
+                  <option value="三相三線 380V">三相三線 380V</option>
+                  <option value="三相四線 380V">三相四線 380V</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+            <!-- 故障照片上傳 (需填寫) -->
+            <div class="upload-item mb-40">
+              <label for="upload">故障照片(最多三張)</label>
+              <div class="upload-wrap">
+                <div class="upload-icon">
+                  <img src="../image/upload-cloud 1.png" alt="">
+                </div>
+                <p class="upload-title">請拍攝設備故障照片 (1 / 3)</p>
+                <input type="file" id="upload" name="upload"  accept="image/png,image/jpg,image/jpeg" multiple="multiple">
+              </div>
+              <!-- 照片列表 -->
+              <ul class="upload-list">
+                <!-- 每增加一張照片就增加一條列表 -->
+                <li class="upload-pre-item">
+                  <div class="upload-pre-img-box">
+                    <img src="../image/Xnip2022-01-20_16-54-45.jpg" alt="">
+                  </div>
+                  <div class="upload-pre-info">
+                    <p>S_5112522221.png</p>
+                    <p>2.4mb</p>
+                  </div>
+                  <button class="upload-pre-icon">
+                    <img src="../image/trush.svg" alt="">
+                  </button>
+                </li>
+              </ul>
+            </div>
+            
+          </ul>
+          
+          <legend>維修資訊</legend>
+          <ul class="mb-40">
+            <!-- 維修人員 -->
+            <li class="uninput-item">
+              <label>維修人員</label>
+              <div class="uninput-box">
+                <!-- 承襲自派工資料 -->
+                <p>陳和均</p>
+              </div>
+            </li>
+            <!-- 所屬門市 -->
+            <li class="uninput-item">
+              <label>所屬門市</label>
+              <div class="uninput-box">
+                <!-- 承襲自業務接單時的資料 -->
+                <p>新北門市</p>
+              </div>
+            </li>
+            <!-- 維修日期 (需填寫) -->
+            <!-- 需跳出月曆選擇 -->
+            <li class="date-item">
+              <label for="install-date">維修日期</label>
+              <input type="date" id="install-date" name="install-date" placeholder="請選擇維修日期">
+            </li>
+            <!-- 開始維修時間 (需填寫) -->
+            <!-- 需跳出月曆選擇 -->
+            <li class="date-item">
+              <label for="install-date">開始維修時間</label>
+              <input type="time" id="install-date" name="install-date" placeholder="請選擇維修日期">
+            </li>
+            <!-- 結束安裝時間 (需填寫) -->
+            <!-- 需跳出月曆選擇 -->
+            <li class="date-item">
+              <label for="install-date">結束維修時間</label>
+              <input type="time" id="install-date" name="install-date" placeholder="請選擇維修日期">
+            </li>
+            <!-- 總施作時間 -->
+            <li class="uninput-item">
+              <label>總施作時間 (自動計算)</label>
+              <div class="uninput-box">
+                <!-- 承襲自業務接單時的資料 -->
+                <p>_ _ : _ _</p>
+              </div>
+            </li>
+            
+          </ul>
+
+          <legend>其他資訊</legend>
+          <!-- 備註說明 (需填寫) -->
+          <div class="textarea-item mb-40">
+            <label for="note">備註說明</label>
+            <div class="textarea-wrap">
+              <textarea name="note" id="note" cols="30" rows="4" placeholder="請輸入備註事項"></textarea>
+            </div>
+          </div>
+
+          <legend>付款資訊</legend>
+          <ul class="mb-40">
+            <!-- 付款方式 (需選擇) -->
+            <li class="select-item">
+              <label for="power-support">付款方式</label>
+              <div class="select-wrap">
+                <select name="power-support" id="power-support" required>
+                  <option value="">請選擇付款方式</option>
+                  <option value="現金">現金</option>
+                  <option value="匯款">匯款</option>
+                  <option value="刷卡">刷卡</option>
+                </select>
+              </div>
+            </li>
+            <!-- 付款金額 (需填寫) -->
+            <li class="input-item">
+              <label for="install-floor">付款金額</label>
+              <input type="number" id="install-floor" name="install-floor" placeholder="請輸入付款金額">
+            </li>
+          </ul>
+          
+          <legend>維修紀錄照片</legend>
+          <!-- 現場維修照片上傳 (需填寫) -->
+          <div class="upload-item mb-40">
+            <label for="upload">現場維修照片(最多九張)</label>
+            <div class="upload-wrap">
+              <div class="upload-icon">
+                <img src="../image/upload-cloud 1.png" alt="">
+              </div>
+              <p class="upload-title">請拍攝現場維修照片 (2 / 9)</p>
+              <input type="file" id="upload" name="upload"  accept="image/png,image/jpg,image/jpeg" multiple="multiple">
+            </div>
+            <!-- 照片列表 -->
+            <ul class="upload-list">
+              <!-- 每增加一張照片就增加一條列表 -->
+              <li class="upload-pre-item">
+                <div class="upload-pre-img-box">
+                  <img src="../image/Xnip2022-01-20_16-54-45.jpg" alt="">
+                </div>
+                <div class="upload-pre-info">
+                  <p>S_5112522221.png</p>
+                  <p>2.4mb</p>
+                </div>
+                <button class="upload-pre-icon">
+                  <img src="../image/trush.svg" alt="">
+                </button>
+              </li>
+              <!-- 每增加一張照片就增加一條列表 -->
+              <li class="upload-pre-item">
+                <div class="upload-pre-img-box">
+                  <img src="../image/Xnip2022-01-20_16-54-45.jpg" alt="">
+                </div>
+                <div class="upload-pre-info">
+                  <p>S_5112522221.png</p>
+                  <p>2.4mb</p>
+                </div>
+                <button class="upload-pre-icon">
+                  <img src="../image/trush.svg" alt="">
+                </button>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- 完成按鈕 -->
+          <div class="submit-item">
+            <input class="btn-filled" type="submit" value="完成維修">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <!-- <footer>
+    <p class="caption">卡未子數位創意有限公司系統開發</p>
+  </footer> -->
+
+  <!-- 遮罩 -->
+  <div class="hamburger-black-overlay"></div>
+</body>
+</html>

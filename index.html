@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>欣能能源</title>
+  <!-- css link -->
+  <link rel="stylesheet" href="../CSS/all.css">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- google icon -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+  <!-- TOP-BAR 漢堡控制器 -->
+  <input type="checkbox" id="menu-toggle">
+  
+  <!-- TOP-BAR Section -->
+  <section class="top-bar">
+    <div class="top-bar-mask">
+      <div class="container">
+        <div class="top-bar-content">
+          <!-- logo -->
+          <a href="./index.html" alt="click to main page" title="Visit the main page">
+            <div class="logo-content">
+              <img src="../image/logo_white.svg" alt="logo">
+            </div>
+          </a>
+          
+          <!-- Hamburger icon -->
+          <label class="hamburger" for="menu-toggle"></label>
+        </div>
+        <!-- Hamburger 選單內容 -->
+        <div class="dropdown-menu">
+          <div class="container">
+            <nav class="main-nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="./password-reset.html">
+                    <div>
+                      <span class="material-icons-outlined fz-32 mr-16">vpn_key</span>
+                      <p>修改密碼</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button class="btn-outline btn-logout" type="submit" alt="登出按鈕">Log Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- home Section -->
+  <section class="home-section">
+    <div class="container">
+      <div class="home-content">
+        <ul class="home-list">
+          <!-- 現勘作業 -->
+          <li class="home-list-item">
+            <a class="home-list-link" href="./form-check.html">
+              <div class="home-list-icon mr-16">
+                <img src="../image/camera-light.svg" alt="">
+              </div>
+              <p>現勘作業</p>
+            </a>
+          </li>
+
+          <!-- 安裝作業 -->
+          <li class="home-list-item">
+            <a class="home-list-link" href="./form-install.html">
+              <div class="home-list-icon mr-16">
+                <img src="../image/truck-light.svg" alt="">
+              </div>
+              <p>安裝作業</p>
+            </a>
+          </li>
+
+          <!-- 維修作業 -->
+          <li class="home-list-item">
+            <a class="home-list-link" href="./form-repair.html">
+              <div class="home-list-icon mr-16">
+                <img src="../image/wrench-light.svg" alt="">
+              </div>
+              <p>維修作業</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- footer -->
+  <!-- <footer>
+    <p class="caption">卡未子數位創意有限公司系統開發</p>
+  </footer> -->
+
+  <!-- 遮罩 -->
+  <div class="hamburger-black-overlay"></div>
+</body>
+</html>

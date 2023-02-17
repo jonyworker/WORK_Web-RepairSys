@@ -1,0 +1,11 @@
+.form-check-section {
+  padding-top: 67px;
+  background-color: var(--form-background-color);
+}
+.form-check-content {
+  height: 100%;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  /* display: flex;
+  flex-direction: column; */
+}

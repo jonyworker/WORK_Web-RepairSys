@@ -1,0 +1,54 @@
+.home-section {
+  padding-top: 67px;
+  background-color: var(--form-background-color);
+  height: 100%;
+}
+.home-section .container {
+  height: 100%;
+}
+.home-content {
+  height: 100%;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+/*///////////////////////
+===== 首頁 - 連結按鈕 =====
+///////////////////////*/
+.home-section .home-list-item {
+  width: 100%;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 125%;
+  background-color: #fff;
+  /* color: var(--text-color-87); */
+  border: 3px solid var(--gray-600);
+  border-radius: 10px;
+  transition: .1s;
+}
+.home-section .home-list-item + .home-list-item {
+  margin-top: 24px;
+}
+.home-section .home-list-item:hover {
+  box-shadow: 0px 0px 0px 4px rgba(103, 170, 50, 0.2);
+  border-color: var(--primary-color);
+}
+.home-section .home-list-item:hover .home-list-link {
+  color: var(--primary-color);
+}
+.home-section .home-list-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 16px 20px;
+  color: var(--text-color-87);
+}
+.home-section .home-list-icon {
+  width: 60px;
+}
+.home-section .home-list-icon img {
+  vertical-align: top;
+  width: 100%;
+}

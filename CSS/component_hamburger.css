@@ -1,0 +1,122 @@
+/*///////////////////
+===== 漢堡：icon =====
+///////////////////*/
+/*----- component_hamburger - 漢堡 icon 控制器 -----*/
+#menu-toggle {
+  position: absolute;
+  z-index: -100;
+  display: none;
+}
+/*----- component_hamburger - 漢堡 icon 動畫 -----*/
+.hamburger {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 80%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 50px;
+}
+.hamburger::before {
+  top: 20%;
+  /* transition: transition-property | transition-duration | transition-timing-function | transition-delay; */
+  transition: top .4s .4s,
+              transform .5s .1s;
+}
+.hamburger::after {
+  bottom: 20%;
+  box-shadow: 0 -9px 0 #ffffffff;
+  /* transition: transition-property | transition-duration | transition-timing-function | transition-delay; */
+  transition: box-shadow .3s .7s,
+              bottom .4s .4s,
+              transform .5s .1s;
+}
+/*----- component_hamburger - 漢堡 icon 動畫控制系統 -----*/
+#menu-toggle:checked ~ .top-bar .top-bar-content .hamburger::before {
+  transform: rotate(45deg);
+  top: 46%;
+  /* transition: transition-property | transition-duration | transition-timing-function | transition-delay; */
+  transition: top .2s .1s,
+              transform .5s .5s;
+}
+#menu-toggle:checked ~ .top-bar .top-bar-content .hamburger::after {
+  transform: rotate(-45deg);
+  box-shadow: 0 -9px 0 #00000000;
+  bottom: 46%;
+  /* transition: transition-property | transition-duration | transition-timing-function | transition-delay; */
+  transition: box-shadow .1s .1s,
+              bottom .2s .1s,
+              transform .5s .5s;
+}
+
+/*/////////////////////
+===== 漢堡：下拉選單 =====
+/////////////////////*/
+/*----- component_hamburger - 下拉選單 -----*/
+.dropdown-menu {
+  background-color: rgba(255,255,255);
+  padding-bottom: 20px;
+  position: absolute;
+  z-index: -100;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transform-origin: 50% 0;
+  transform: translateY(-100%);
+  transition: 0.2s;
+}
+.main-nav a {
+  display: block;
+  display: flex;
+  padding: 32px 4px;
+  font-size: 22px;
+  color: var(--text-color-87);
+}
+.main-nav a > div {
+  display: flex;
+  align-items: center;
+}
+/*----- component_hamburger - 下拉選單 動畫控制系統 -----*/
+#menu-toggle:checked ~ .top-bar .dropdown-menu {
+  transform: translateY(0);
+}
+
+/*//////////////////////////
+===== 漢堡：模糊 overlay =====
+//////////////////////////*/
+/*----- component_hamburger - overlay -----*/
+.hamburger-black-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color:rgba(0,0,0,.5);
+  opacity: 0;
+  backdrop-filter: blur(4px);
+  display: none;
+  transition: 0.1s;
+}
+/*----- component_hamburger - overlay 控制 -----*/
+#menu-toggle:checked ~ .hamburger-black-overlay {
+  z-index: 10;
+  opacity: 100;
+  display: block;
+}
+
+/* .alert-overlay {
+  z-index: 200;
+} */
+/* 警告視窗、搜尋框 - 控制系統 */
+/* #alert-toggle:checked ~ .alert-overlay {
+  opacity: 100;
+  display: block;
+} */

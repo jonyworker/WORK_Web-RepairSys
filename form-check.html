@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>欣能能源</title>
+  <!-- css link -->
+  <link rel="stylesheet" href="../CSS/all.css">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- google icon -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+  <!-- TOP-BAR 漢堡控制器 -->
+  <input type="checkbox" id="menu-toggle">
+  
+  <!-- TOP-BAR Section -->
+  <section class="top-bar">
+    <div class="top-bar-mask">
+      <div class="container">
+        <div class="top-bar-content">
+          <!-- logo -->
+          <a href="./index.html" alt="click to main page" title="Visit the main page">
+            <div class="logo-content">
+              <img src="../image/logo_white.svg" alt="logo">
+            </div>
+          </a>
+          
+          <!-- Hamburger icon -->
+          <label class="hamburger" for="menu-toggle"></label>
+        </div>
+        <!-- Hamburger 選單內容 -->
+        <div class="dropdown-menu">
+          <div class="container">
+            <nav class="main-nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="./password-reset.html">
+                    <div>
+                      <span class="material-icons-outlined fz-32 mr-16">vpn_key</span>
+                      <p>修改密碼</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button class="btn-outline btn-logout" type="submit" alt="登出按鈕">Log Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- form-check Section -->
+  <section class="form-check-section">
+    <div class="container">
+      <div class="form-check-content">
+        <!-- title -->
+        <div class="title-wrap">
+          <h2 class="title mb-8">現場勘查單</h2>
+          <p class="subtitle mb-32">哈囉！你好～請協助我們現場勘查完畢後輸入以下資料，以幫助後續工作銜接</p>
+        </div>
+
+        <!-- 表單 -->
+        <form class="form-group" action="#">
+
+          <legend>客戶基本資料</legend>
+          <ul class="mb-40">
+            <!-- 案件編號 -->
+            <li class="uninput-item">
+              <label>案件編號</label>
+              <div class="uninput-box">
+                <!-- 承襲自業務接單時的資料 -->
+                <p>20220131001</p>
+              </div>
+            </li>
+            <!-- 客戶名稱 -->
+            <li class="uninput-item">
+              <label>客戶名稱</label>
+              <div class="uninput-box">
+                <!-- 承襲自業務接單時的資料 -->
+                <p>王小明</p>
+              </div>
+            </li>
+            <!-- 客戶地址 -->
+            <li class="uninput-item">
+              <label>客戶地址</label>
+              <!-- 承襲自業務接單時的資料 -->
+              <div class="d-flex mb-16">
+                <div class="uninput-box mr-8">
+                  <p>台北市</p>
+                </div>
+                <div class="uninput-box ml-8">
+                  <p>中山區</p>
+                </div>
+              </div>
+              <div class="uninput-box">
+                <p>中山北路二段125巷31弄4-1號5樓 </p>
+              </div>
+              
+            </li>
+            <!-- 聯絡電話 -->
+            <li class="uninput-item">
+              <label>聯絡電話</label>
+              <div class="uninput-box">
+                <!-- 承襲自業務接單時的資料 -->
+                <p>0988-888-888</p>
+              </div>
+            </li>
+            <!-- 家中人口數 (需選擇) -->
+            <li class="select-item">
+              <label for="family-consists">家中人口數</label>
+              <div class="select-wrap">
+                <select name="family-consists" id="family-consists" required>
+                  <option value="">請選擇家中人口數</option>
+                  <option value="2~3人">2~3人</option>
+                  <option value="3~5人">3~5人</option>
+                  <option value="6人以上">6人以上</option>
+                  <option value="其他">其他</option>
+                </select>
+              </div>
+            </li>
+            <!-- 泡澡習慣 (需選擇) -->
+            <li class="select-item">
+              <label for="take-bath">泡澡習慣</label>
+              <div class="select-wrap">
+                <select name="take-bath" id="take-bath" required>
+                  <option value="">請選擇泡澡習慣</option>
+                  <option value="經常">經常</option>
+                  <option value="偶爾">偶爾</option>
+                  <option value="無">無</option>
+                </select>
+              </div>
+            </li>
+          </ul>  
+          
+          <legend>設備資訊</legend>
+          <ul class="mb-40">
+            <!-- 欲安裝設備 -->
+            <li class="uninput-item">
+              <label>欲安裝設備</label>
+              <div class="uninput-box">
+                <!-- 承襲自業務接單時的資料 -->
+                <p>ETC-80</p>
+              </div>
+            </li>
+            <!-- 目前使用的設備 (需選擇) -->
+            <li class="select-item">
+              <label for="old-equipment">目前使用的設備</label>
+              <div class="select-wrap">
+                <select name="old-equipment" id="old-equipment" required>
+                  <option value="">請選擇目前使用的設備</option>
+                  <option value="無">無</option>
+                  <option value="瓦斯熱水器">瓦斯熱水器</option>
+                  <option value="電熱水器">電熱水器</option>
+                  <option value="瓦斯鍋爐">瓦斯鍋爐</option>
+                  <option value="熱泵熱水器">熱泵熱水器</option>
+                  <option value="其他">其他</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+
+          <legend>安裝環境資訊</legend>
+          <ul class="mb-40">
+            <!-- 屋型 (需選擇) -->
+            <li class="select-item">
+              <label for="house-type">屋型</label>
+              <div class="select-wrap">
+                <select name="house-type" id="house-type" required>
+                  <option value="">請選擇房屋類型</option>
+                  <option value="公寓">公寓</option>
+                  <option value="華廈">華廈</option>
+                  <option value="大樓">大樓</option>
+                  <option value="透天厝">透天厝</option>
+                  <option value="旅館">旅館</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+            <!-- 安裝位置/尺寸 (需選擇) -->
+            <li class="select-item">
+              <label for="install-position">安裝位置/尺寸</label>
+              <div class="select-wrap">
+                <select name="install-position" id="install-position" required>
+                  <option value="">請選擇安裝位置</option>
+                  <option value="陽台">陽台</option>
+                  <option value="浴室">浴室</option>
+                  <option value="頂樓露台">頂樓露台</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+            <!-- 安裝樓層 (需填寫) -->
+            <li class="input-item">
+              <label for="install-floor">安裝樓層</label>
+              <input type="text" id="install-floor" name="install-floor" placeholder="請輸入安裝樓層">
+            </li>
+            <!-- 搬運方式 (需選擇) -->
+            <li class="select-item">
+              <label for="carry-way">搬運方式</label>
+              <div class="select-wrap">
+                <select name="carry-way" id="carry-way" required>
+                  <option value="">請選擇搬運方式</option>
+                  <option value="吊車">吊車</option>
+                  <option value="電梯">電梯</option>
+                  <option value="人力">人力</option>
+                  <option value="電梯加人力">電梯加人力</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+            <!-- 現場瓦斯燈表數量 (需選擇) -->
+            <li class="select-item">
+              <label for="bathtub-number">現場瓦斯燈表數量</label>
+              <div class="select-wrap">
+                <select name="bathtub-number" id="bathtub-number" required>
+                  <option value="">請選擇瓦斯燈表數量</option>
+                  <option value="無">無</option>
+                  <option value="1個">1個</option>
+                  <option value="2個">2個</option>
+                  <option value="3個">3個</option>
+                  <option value="4個">4個</option>
+                </select>
+              </div>
+            </li>
+            <!-- 是否有遮雨棚 (需選擇) -->
+            <li class="radio-item">
+              <label>是否有遮雨棚</label>
+              <div class="radio-selection">
+                <div class="selection-1">
+                  <input
+                  type="radio"
+                  id="rain-cover-1"
+                  name="rain-cover"
+                  value="1"
+                  checked>
+                  <label for="rain-cover-1">有</label>
+                </div>
+                <div class="selection-2">
+                  <input 
+                  type="radio"
+                  id="rain-cover-2"
+                  name="rain-cover"
+                  value="2">
+                  <label for="rain-cover-2">沒有</label>
+                </div>
+              </div>
+            </li>
+            <!-- 熱水是否分層 (需選擇) -->
+            <li class="radio-item">
+              <label>熱水是否分層</label>
+              <div class="radio-selection">
+                <div class="selection-1">
+                  <input
+                  type="radio"
+                  id="hot-water-1"
+                  name="hot-water"
+                  value="1">
+                  <label for="hot-water-1">分層</label>
+                </div>
+                <div class="selection-2">
+                  <input 
+                  type="radio"
+                  id="hot-water-2"
+                  name="hot-water"
+                  value="2"
+                  checked >
+                  <label for="hot-water-2">不分層</label>
+                </div>
+              </div>
+            </li>
+            <!-- 是否有天然氣 (需選擇) -->
+            <li class="radio-item">
+              <label>是否有天然氣</label>
+              <div class="radio-selection">
+                <div class="selection-1">
+                  <input
+                  type="radio"
+                  id="gas-support-1"
+                  name="gas-support"
+                  value="1"
+                  checked>
+                  <label for="gas-support-1">有</label>
+                </div>
+                <div class="selection-2">
+                  <input 
+                  type="radio"
+                  id="gas-support-2"
+                  name="gas-support"
+                  value="2">
+                  <label for="gas-support-2">沒有</label>
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+
+          <legend>浴室資訊</legend>
+          <ul class="mb-40">
+            <!-- 浴室數量 (需選擇) -->
+            <li class="select-item">
+              <label for="bathroom-number">浴室數量</label>
+              <div class="select-wrap">
+                <select name="bathroom-number" id="bathroom-number" required>
+                  <option value="">請選擇浴室數量</option>
+                  <option value="無">無</option>
+                  <option value="1個">1個</option>
+                  <option value="2個">2個</option>
+                  <option value="3個">3個</option>
+                  <option value="4個">4個</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+            <!-- 浴缸數量 (需選擇) -->
+            <li class="select-item">
+              <label for="bathtub-number">浴缸數量</label>
+              <div class="select-wrap">
+                <select name="bathtub-number" id="bathtub-number" required>
+                  <option value="">請選擇浴缸數量</option>
+                  <option value="無">無</option>
+                  <option value="1個">1個</option>
+                  <option value="2個">2個</option>
+                  <option value="3個">3個</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+
+          <!-- 依照選擇的浴缸數量顯示 -->
+          <!-- 程式碼#339的class中加 .d-normal 可顯示浴缸容量資訊 -->
+          <!-- 程式碼#339的class中加 .d-none 隱藏浴缸容量資訊 -->
+          <div class="d-normal">
+            <legend>浴缸容量資訊</legend>
+            <ul class="mb-40">
+              <!-- 浴缸 1 - 長 / 寬 / 高 / 容量 (需填寫) -->
+              <li class="input-item-small">
+                <label>浴缸 1 - 長 / 寬 / 高 / 容量</label>
+                <div class="d-flex mb-16">
+                  <input class="mr-8" type="text" id="bathtub-length" name="bathtub-length" placeholder="長(cm)">
+                  <input class="ml-8" type="text" id="bathtub-width" name="bathtub-width" placeholder="寬(cm)">
+                </div>
+                <div class="d-flex">
+                  <input class="mr-8" type="text" id="bathtub-height" name="bathtub-height" placeholder="高(cm)">
+                  <input class="ml-8" type="text" id="bathtub-capacity" name="bathtub-capacity" placeholder="容量(cm)">
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <legend>安裝判斷</legend>
+          <ul class="mb-40">
+            <!-- 是否可以安裝 (需選擇) -->
+            <li class="radio-item">
+              <label>是否可以安裝</label>
+              <div class="radio-selection">
+                <div class="selection-1">
+                  <input
+                  type="radio"
+                  id="install-1"
+                  name="install"
+                  value="1"
+                  checked>
+                  <label for="install-1">已經可以安裝</label>
+                </div>
+                <div class="selection-2">
+                  <input 
+                  type="radio"
+                  id="install-2"
+                  name="install"
+                  value="2">
+                  <label for="install-2">未完成安裝需求</label>
+                </div>
+              </div>
+            </li>
+            <!-- 預計安裝日期 (需填寫) -->
+            <!-- 需跳出月曆選擇 -->
+            <li class="date-item">
+              <label for="install-date">預計安裝日期</label>
+              <input type="date" id="install-date" name="install-date" placeholder="請選擇預計安裝日期">
+            </li>
+          </ul>
+
+          <legend>管線電路資訊</legend>
+          <ul class="mb-40">
+            <!-- 供電電源 (需選擇) -->
+            <li class="select-item">
+              <label for="power-support">供電電源</label>
+              <div class="select-wrap">
+                <select name="power-support" id="power-support" required>
+                  <option value="">請選擇供電電源</option>
+                  <option value="單相 110V">單相 110V</option>
+                  <option value="單相 220V">單相 220V</option>
+                  <option value="三相 220V">三相 220V</option>
+                  <option value="三相三線 380V">三相三線 380V</option>
+                  <option value="三相四線 380V">三相四線 380V</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+            <!-- 電線線徑 (需選擇) -->
+            <li class="select-item">
+              <label for="cable-size">電線線徑</label>
+              <div class="select-wrap">
+                <select name="cable-size" id="cable-size" required>
+                  <option value="">請選擇線徑尺寸</option>
+                  <option value="2.0 mm x 2C">2.0 mm x 2C</option>
+                  <option value="2.0 mm x 3C">2.0 mm x 3C</option>
+                  <option value="3.5 mm2 x 3C">3.5 mm2 x 3C</option>
+                  <option value="5.5 mm2 x 3C">5.5 mm2 x 3C</option>
+                  <option value="8 mm2 x 3C">8 mm2 x 3C</option>
+                  <option value="14 mm2 x 3C">14 mm2 x 3C</option>
+                  <option value="22 mm2 x 3C">22 mm2 x 3C</option>
+                  <option value="30 mm2 x 3C">30 mm2 x 3C</option>
+                  <option value="38 mm2 x 3C">38 mm2 x 3C</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+            <!-- 熱水管徑 (需選擇) -->
+            <li class="select-item">
+              <label for="hot-pipe-size">熱水管徑</label>
+              <div class="select-wrap">
+                <select name="hot-pipe-size" id="hot-pipe-size" required>
+                  <option value="">請選擇管徑尺寸</option>
+                  <option value="1/2" (4分)">1/2" (4分)</option>
+                  <option value="3/4" (6分)">3/4" (6分)</option>
+                  <option value="1" (1英吋)">1" (1英吋)</option>
+                  <option value="1-1/4" (1.2英吋)">1-1/4" (1.2英吋)</option>
+                  <option value="1-1/2" (1.5英吋)">1-1/2" (1.5英吋)</option>
+                  <option value="2" (2英吋)">2" (2英吋)</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+            <!-- 冷水管徑 (需選擇) -->
+            <li class="select-item">
+              <label for="cold-pipe-size">冷水管徑</label>
+              <div class="select-wrap">
+                <select name="cold-pipe-size" id="cold-pipe-size" required>
+                  <option value="">請選擇管徑尺寸</option>
+                  <option value="1/2" (4分)">1/2" (4分)</option>
+                  <option value="3/4" (6分)">3/4" (6分)</option>
+                  <option value="1" (1英吋)">1" (1英吋)</option>
+                  <option value="1-1/4" (1.2英吋)">1-1/4" (1.2英吋)</option>
+                  <option value="1-1/2" (1.5英吋)">1-1/2" (1.5英吋)</option>
+                  <option value="2" (2英吋)">2" (2英吋)</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+            <!-- 排水管徑 (需選擇) -->
+            <li class="select-item">
+              <label for="pipe-size">排水管徑</label>
+              <div class="select-wrap">
+                <select name="pipe-size" id="pipe-size" required>
+                  <option value="">請選擇管徑尺寸</option>
+                  <option value="1/2" (4分)">1/2" (4分)</option>
+                  <option value="3/4" (6分)">3/4" (6分)</option>
+                  <option value="1" (1英吋)">1" (1英吋)</option>
+                  <option value="1-1/4" (1.2英吋)">1-1/4" (1.2英吋)</option>
+                  <option value="1-1/2" (1.5英吋)">1-1/2" (1.5英吋)</option>
+                  <option value="2" (2英吋)">2" (2英吋)</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+
+          <legend>其他資訊</legend>
+          <ul class="mb-40">
+            <!-- 現場其他需求 (需選擇) -->
+            <li class="select-item">
+              <label for="other-request">現場其他需求</label>
+              <div class="select-wrap">
+                <select name="other-request" id="other-request" required>
+                  <option value="">請選擇其他需求</option>
+                  <option value="漏電無熔絲開關">漏電無熔絲開關</option>
+                  <option value="回水管">回水管</option>
+                  <option value="排氣管">排氣管</option>
+                  <option value="透天厝">透天厝</option>
+                  <option value="定時開關">定時開關</option>
+                  <option value="其他">其他(請備註說明)</option>
+                </select>
+              </div>
+            </li>
+            <!-- 備註說明 (需填寫) -->
+            <li class="textarea-item mb-40">
+              <label for="note">備註說明</label>
+              <div class="textarea-wrap">
+                <textarea name="note" id="note" cols="30" rows="4" placeholder="請輸入備註事項"></textarea>
+              </div>
+            </li>
+          </ul>
+          
+          <legend>現勘紀錄照片</legend>
+          <!-- 圖片上傳 (需填寫) -->
+          <div class="upload-item mb-40">
+            <label for="upload">現場勘驗照片(最多九張)</label>
+            <div class="upload-wrap">
+              <div class="upload-icon">
+                <img src="../image/upload-cloud 1.png" alt="">
+              </div>
+              <p class="upload-title">請拍攝現勘照片 (1 / 9)</p>
+              <input type="file" id="upload" name="upload"  accept="image/png,image/jpg,image/jpeg" multiple="multiple" placeholder="請選擇預計安裝日期">
+            </div>
+            <ul class="upload-list">
+              <li class="upload-pre-item">
+                <div class="upload-pre-img-box">
+                  <img src="../image/Xnip2022-01-20_16-54-45.jpg" alt="">
+                </div>
+                <div class="upload-pre-info">
+                  <p>S_5112522221.png</p>
+                  <p>2.4mb</p>
+                </div>
+                <button class="upload-pre-icon">
+                  <img src="../image/trush.svg" alt="">
+                </button>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- 完成按鈕 -->
+          <div class="submit-item">
+            <input class="btn-filled" type="submit" value="完成現場勘查">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <!-- <footer>
+    <p class="caption">卡未子數位創意有限公司系統開發</p>
+  </footer> -->
+
+  <!-- 遮罩 -->
+  <div class="hamburger-black-overlay"></div>
+</body>
+</html>
